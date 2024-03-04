@@ -1,0 +1,35 @@
+from RaceFactionLists import races, factions, sexes
+import random
+import RollDice
+
+class Survivor:
+    def __init__(self, races, factions, sexes):
+        self.name = input("Enter survivor name: ")
+        self.race = random.choice(races)
+        self.faction = random.choice(factions)
+        self.sex = random.choice(sexes)
+        self.strength = RollDice.roll_dice(10)
+        self.perception = RollDice.roll_dice(10)
+        self.endurance = RollDice.roll_dice(10)
+        self.charisma = RollDice.roll_dice(10)
+        self.intelligence = RollDice.roll_dice(10)
+        self.agility = RollDice.roll_dice(10)
+        self.luck = RollDice.roll_dice(10)
+
+    def present_char(self):
+        print(my_survivor.name)
+        print(my_survivor.race)
+        print(my_survivor.faction)
+        print(my_survivor.sex)
+        print("Strength: " + str(my_survivor.strength))
+        print("Perception: " + str(my_survivor.perception))
+        print("Endurance: " + str(my_survivor.endurance))
+        print("Charisma: " + str(my_survivor.charisma))
+        print("Intelligence: " + str(my_survivor.intelligence))
+        print("Agility: " + str(my_survivor.agility))
+        print("Luck: " + str(my_survivor.luck))
+
+my_survivor = Survivor(races, factions, sexes)
+my_survivor.present_char()
+
+
